@@ -61,7 +61,7 @@ impl<'a> Command<'a> {
     /// )
     /// ```
     pub fn from_args(args: Args, command_patterns: &[CommandPattern<'a>]) -> Result<Self, String> {
-        let args = args.as_vec();
+        let args = args.to_vec();
         let mut args = args.iter();
         _ = args.next();
 
